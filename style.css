@@ -1,0 +1,26 @@
+h1{
+	color: #6fbb9a;
+	text-align: center ;
+	font-size: 250%;
+}
+h2{
+	color: #6fbb9a;
+	border: #94c8b1 1px dotted;
+	border-left: #fdf0a7 10px solid;
+	padding: 5px 20px;
+	margin-bottom: 0;
+}
+
+a:link {color:#cfb585;} 
+a:visited {color:#85bec5;} 
+a:hover {color:#e58e82;}
+a:active {color:#bd95d8;}
+
+
+#wrap{
+	width: 798px;
+	margin: 40px auto;
+	padding: 40px 80px;
+	border: #86c2ae 1px solid;
+	background-color: #fff;
+}

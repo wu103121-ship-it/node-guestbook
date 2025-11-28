@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js 班級留言板</title>
+    <script src="guestbook.js" defer></script>
+    <style>
+        body { font-family: "微軟正黑體", sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+       
+        /* 留言列表樣式 */
+        .message-item { border: 1px solid #ddd; margin-bottom: 10px; padding: 15px; border-radius: 8px; background-color: #f9f9f9; }
+        .message-item small { color: #888; font-size: 0.8em; }
+       
+        /* 新增留言表單樣式 */
+        .form-container {
+            background-color: #eef;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #ccd;
+        }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box; /* 確保 padding 不會撐破寬度 */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <h1>📝 班級留言板</h1>
+
+    <div class="form-container">
+        <h3>我要留言</h3>
+        <form action="/add-message" method="POST">
+            <div class="form-group">
+                <label for="username">姓名：</label>
+                <input type="text" id="username" name="username_field" placeholder="請輸入你的名字" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">留言內容：</label>
+                <textarea id="content" name="content_field" rows="3" placeholder="想說些什麼..." required></textarea>
+            </div>
+
+            <button type="submit">送出留言</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <h3>最新留言列表</h3>
+    <div id="messages-list">
+        <p>載入中...</p>
+    </div>
+
+</body>
+</html>
+
+
