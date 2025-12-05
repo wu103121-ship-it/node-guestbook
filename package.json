@@ -12,7 +12,15 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "mysql2": "^3.15.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wu103121-ship-it/node-guestbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wu103121-ship-it/node-guestbook/issues"
+  },
+  "homepage": "https://github.com/wu103121-ship-it/node-guestbook#readme"
 }
