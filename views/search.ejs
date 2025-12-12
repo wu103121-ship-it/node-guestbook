@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>修改個人簡介</title>
+</head>
+<body style="text-align: center; padding-top: 50px;">
+    <h1>📝 修改簡介</h1>
+    <p>目前的簡介：<%= currentBio %></p>
+
+    <!-- POST 表單：資料會包在封包裡 -->
+    <form action="/update-bio" method="POST">
+        <!-- 這個隱藏欄位是用來告訴後端「我是誰」 -->
+        <input type="hidden" name="myID" value="<%= id %>">
+       
+        <input type="text" name="newBio" placeholder="輸入新的自我介紹...">
+        <button type="submit">確認修改</button>
+    </form>
+
+    <br>
+    <a href="/profile/<%= id %>">取消返回</a>
+</body>
+</html>

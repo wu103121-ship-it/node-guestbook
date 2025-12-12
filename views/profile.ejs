@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= data.name %> 的個人主頁</title>
+    <style>
+    </style>
+
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <img src="<%= data.avatar %>" alt="大頭貼" class="avatar">            
+            <div class="name"><%= data.name %></div>            
+            <div class="bio"><%= data.bio %></div>
+        </div>
+        <div class="stats">
+            <span>好友數：<%= data.friends %></span>
+        </div>
+        <hr>
+        <h3>📜 最近貼文</h3>        
+        <% if (data.posts.length === 0) { %>
+            <p class="no-posts">這個人很懶，還沒有發文喔 😴</p>
+        <% } else { %>
+            <ul class="post-list">
+                <% data.posts.forEach(function(post) { %>
+                    <li class="post-item">
+                        💬 <%= post %>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>        
+        <br>
+        <a href="/" class="back-link">← 回首頁</a>
+    </div>
+</body>
+</html>
