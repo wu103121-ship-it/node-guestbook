@@ -1,0 +1,68 @@
+/* 全域設定：設定字型、背景色、讓卡片置中 */
+        body {
+            font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+            background-color: #f0f2f5; /* 類似 FB 的淺灰背景 */
+            display: flex;
+            justify-content: center; /* 水平置中 */
+            padding-top: 50px; /* 上方留點空間 */
+        }
+        /* 卡片本體：白色背景、陰影效果 */
+        .card {
+            background: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px; /* 圓角設計 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 讓卡片有浮起來的感覺 */
+        }
+        /* 頭部區域：文字置中 */
+        .header { text-align: center; }
+        /* 大頭貼：圓形切割、藍色邊框 */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* 50% 會變成正圓形 */
+            border: 3px solid #1877f2; /* FB 藍的邊框 */
+            object-fit: cover; /* 確保圖片縮放後不會變形 */
+        }
+        /* 名字：加粗、調整間距 */
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        /* 自我介紹：灰色文字 */
+        .bio { color: #65676b; }
+        /* 數據統計區 (好友數)：排版與顏色 */
+        .stats {
+            display: flex;
+            justify-content: space-around; /* 讓內容平均分散 */
+            margin: 20px 0;
+            font-weight: bold;
+            color: #1877f2;
+        }
+        /* 貼文列表：拿掉預設的黑點 */
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+        /* 單篇貼文：底線分隔 */
+        .post-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        /* --- 新增：無貼文時的提示樣式 --- */
+        .no-posts {
+            text-align: center;
+            color: #888;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        /* --- 新增：回首頁連結的美化 --- */
+        .back-link {
+            display: inline-block; /* 讓它可以設定 padding */
+            text-decoration: none; /* 去除底線 */
+            color: #1877f2;
+            font-weight: bold;
+            transition: color 0.3s; /* 滑鼠移過去有漸變效果 */
+        }
+        .back-link:hover { color: #145dbf; /* 滑鼠移上去變深藍色 */ }
